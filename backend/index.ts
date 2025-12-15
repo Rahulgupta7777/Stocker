@@ -22,6 +22,12 @@ app.get('/health', (req, res) => {
 // Auth Routes
 app.post('/api/auth/google', loginWithGoogle);
 
+// Portfolio Routes
+import { getPortfolios, createPortfolio, addPosition } from './src/controllers/portfolioController';
+app.get('/api/portfolios', getPortfolios);
+app.post('/api/portfolios', createPortfolio);
+app.post('/api/portfolios/:portfolioId/positions', addPosition);
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
