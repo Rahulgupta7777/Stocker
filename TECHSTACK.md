@@ -1,22 +1,17 @@
 # Technology Stack
 
-## Backend
+## Core Platform
+- **Frontend**: React 18, TypeScript, TailwindCSS, Vite
+- **Backend (App)**: Node.js (Express/NestJS)
+- **Database**: PostgreSQL
+- **ORM**: Prisma
+- **Authentication**: Google OAuth2
+
+## Data Analysis Engine
 - **Language**: Python 3.9+
-- **Framework**: FastAPI
-- **Server**: Uvicorn
-- **Data Analysis**: Pandas, Pandas-TA
-- **Market Data**: yfinance
+- **Framework**: FastAPI (Internal Service)
+- **Libraries**: Pandas, Pandas-TA, yfinance
 
-## Frontend (Planned)
-- **Framework**: React 18
-- **Build Tool**: Vite
-- **Language**: TypeScript
-- **Styling**: TailwindCSS
-- **State Management**: React Hooks
-- **Data Fetching**: Axios / TanStack Query
-- **Charting**: Recharts
-- **Icons**: Lucide React
-- **Animations**: Framer Motion
-
-## Infrastructure
+## Infrastructure & DevOps
 - **Version Control**: Git
+- **Containerization**: Docker (Planned)
