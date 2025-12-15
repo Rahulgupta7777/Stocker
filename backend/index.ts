@@ -28,6 +28,11 @@ app.get('/api/portfolios', getPortfolios);
 app.post('/api/portfolios', createPortfolio);
 app.post('/api/portfolios/:portfolioId/positions', addPosition);
 
+// Analysis Routes (Proxy)
+import { getStockAnalysis, getStockHistory } from './src/controllers/analysisController';
+app.get('/api/analyze/:ticker', getStockAnalysis);
+app.get('/api/history/:ticker', getStockHistory);
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
