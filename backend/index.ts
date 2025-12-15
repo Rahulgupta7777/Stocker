@@ -9,7 +9,7 @@ const app = express();
 const prisma = new PrismaClient();
 const PORT = process.env.PORT || 3000;
 
-import { loginWithGoogle } from './src/controllers/authController';
+import { loginWithGoogle, register, login, guestLogin } from './src/controllers/authController';
 
 app.use(cors({
   origin: 'http://localhost:5173', // Frontend URL
@@ -24,6 +24,9 @@ app.get('/health', (req, res) => {
 
 // Auth Routes
 app.post('/api/auth/google', loginWithGoogle);
+app.post('/api/auth/register', register);
+app.post('/api/auth/login', login);
+app.post('/api/auth/guest', guestLogin);
 
 // Portfolio Routes
 import { getPortfolios, createPortfolio, addPosition } from './src/controllers/portfolioController';
