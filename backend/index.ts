@@ -11,7 +11,10 @@ const PORT = process.env.PORT || 3000;
 
 import { loginWithGoogle } from './src/controllers/authController';
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173', // Frontend URL
+  credentials: true
+}));
 app.use(express.json());
 
 // Basic health check
