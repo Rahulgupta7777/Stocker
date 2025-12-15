@@ -1,3 +1,5 @@
 yfinance
 pandas
 pandas-ta
+fastapi
+uvicorn
