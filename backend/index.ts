@@ -9,6 +9,8 @@ const app = express();
 const prisma = new PrismaClient();
 const PORT = process.env.PORT || 3000;
 
+import { loginWithGoogle } from './src/controllers/authController';
+
 app.use(cors());
 app.use(express.json());
 
@@ -17,9 +19,8 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-// TODO: Auth routes
-// TODO: Portfolio routes
-// TODO: Python integration routes
+// Auth Routes
+app.post('/api/auth/google', loginWithGoogle);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
