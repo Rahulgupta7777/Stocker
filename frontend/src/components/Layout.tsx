@@ -28,9 +28,9 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ icon: Icon, label, href }) =>
 };
 
 const Header = () => (
-    <header className="h-16 border-b border-border bg-card/50 backdrop-blur-md px-6 flex items-center justify-between sticky top-0 z-10">
+    <header className="h-16 border-b border-border bg-white/50 backdrop-blur-md px-6 flex items-center justify-between sticky top-0 z-10">
         <div className="flex items-center gap-2">
-            <h2 className="text-xl font-semibold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-xl font-semibold text-foreground">
                 Overview
             </h2>
         </div>
@@ -38,8 +38,8 @@ const Header = () => (
             <button className="p-2 text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-muted">
                 <Bell className="w-5 h-5" />
             </button>
-            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-primary to-purple-500 overflow-hidden flex items-center justify-center">
-                <span className="text-xs font-bold text-white">JD</span>
+            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <span className="text-xs font-bold text-primary">JD</span>
             </div>
         </div>
     </header>
@@ -48,8 +48,8 @@ const Header = () => (
 const Sidebar = () => (
     <aside className="w-64 border-r border-border bg-card h-screen flex flex-col fixed left-0 top-0 z-20">
         <div className="h-16 flex items-center px-6 border-b border-border">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-primary bg-clip-text text-transparent flex items-center gap-2">
-                <Wallet className="w-6 h-6 text-primary" />
+            <h1 className="text-2xl font-bold text-primary flex items-center gap-2">
+                <Wallet className="w-6 h-6" />
                 Stocker
             </h1>
         </div>
