@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
-import { TrendingUp, TrendingDown, Activity, DollarSign } from 'lucide-react';
+import { TrendingUp, TrendingDown } from 'lucide-react';
 import { getAnalysis, getHistory } from '@/services/api';
 
 const StatCard = ({ title, value, change, isPositive }: { title: string, value: string, change: string | number, isPositive: boolean }) => (
